@@ -2,6 +2,10 @@ package com.antonio.cloudparking.controller.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL) // Inclui no HTML somente os elementos não nulos.
 public class ParkingDto {
 	
 	private String id;
@@ -9,7 +13,9 @@ public class ParkingDto {
 	private String state;
 	private String model;
 	private String color;
+	@JsonFormat (pattern ="dd/MM/yyyy HH:mm")
 	private LocalDateTime entryDate;
+	@JsonFormat (pattern ="dd/MM/yyyy HH:mm")
 	private LocalDateTime exitDate;
 	private Double bill;
 	
