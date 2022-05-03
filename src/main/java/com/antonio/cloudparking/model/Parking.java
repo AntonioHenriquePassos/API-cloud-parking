@@ -2,15 +2,30 @@ package com.antonio.cloudparking.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Parking {
 	
+	@Id
+	@Column(length = 50)
 	private String id;
+	
+	@Column(length = 50)
 	private String license;
+	@Column(length = 50)
 	private String state;
+	@Column(length = 50)
 	private String model;
+	@Column(length = 50)
 	private String color;
+	@Column(length = 50)
 	private LocalDateTime entryDate;
+	@Column(length = 50)
 	private LocalDateTime exitDate;
+	@Column(length = 50)
 	private Double bill;
 	
 	
